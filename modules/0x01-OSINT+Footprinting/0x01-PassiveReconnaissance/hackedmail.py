@@ -9,7 +9,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import os
 import sys
 import requests
@@ -23,11 +23,11 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 def getRes0x00():
 
-    email = raw_input(O+' [#] Enter the email :> '+R)
+    email = input(O+' [#] Enter the email :> '+R)
     if '@' in email and '.' in email:
         pass
     else:
-        email = raw_input(O+' [#] Enter a valid email :> '+R)
+        email = input(O+' [#] Enter a valid email :> '+R)
 
     print(GR+' [*] Setting headers... (behaving as a browser)...')
     time.sleep(0.7)

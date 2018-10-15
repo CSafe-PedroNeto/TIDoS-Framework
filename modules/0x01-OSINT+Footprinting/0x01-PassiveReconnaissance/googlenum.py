@@ -9,11 +9,11 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import requests
 import time
 import json
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 from core.Core.colors import *
 
 def googlenum(web):

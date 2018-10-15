@@ -9,7 +9,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import os
 import sys
 import requests
@@ -24,9 +24,9 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 def getRes0x00(web):
 
     error = 0
-    fdate = raw_input(O+' [#] Year from when results to be fetched (eg. 2010) :> '+C)
-    tdate = raw_input(GR+' [#] Year till when results to be fetched (eg. 2017) :> '+C)
-    limit = raw_input(O+' [#] No. of results (eg. 50) :> '+C)
+    fdate = input(O+' [#] Year from when results to be fetched (eg. 2010) :> '+C)
+    tdate = input(GR+' [#] Year till when results to be fetched (eg. 2017) :> '+C)
+    limit = input(O+' [#] No. of results (eg. 50) :> '+C)
 
     if "://" in web:
         web = web.split('://')[1]

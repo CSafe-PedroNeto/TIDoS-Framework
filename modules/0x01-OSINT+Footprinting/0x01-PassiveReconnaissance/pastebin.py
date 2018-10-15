@@ -9,13 +9,13 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 try:
     from google import search
 except:
     from googlesearch import search
 import time
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 from random import randint
 from time import sleep
 from core.Core.colors import *
@@ -38,7 +38,7 @@ def getposts(web):
         print(O+" [*] Finding Pastebin posts ...\n")
         google_it("site:pastebin.com intext:"+site+"")
 
-    except urllib2.HTTPError as err:
+    except urllib.error.HTTPError as err:
         if err.code == 503:
             print(R+' [-] Captcha appeared...\n')
             pass

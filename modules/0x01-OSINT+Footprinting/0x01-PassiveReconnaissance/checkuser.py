@@ -11,12 +11,12 @@
 
 # WARNING : may return false positives
 
-from __future__ import print_function
+
 import os
 import requests
 import json
 import time
-import urllib
+import urllib.request, urllib.parse, urllib.error
 from core.Core.colors import *
 serv = []
 

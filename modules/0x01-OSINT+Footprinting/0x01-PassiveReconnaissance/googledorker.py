@@ -9,14 +9,14 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 try:
     from google import search
 except:
     from googlesearch import search
 import os
 import time
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 from random import randint
 from time import sleep
 from core.Core.colors import *
@@ -115,7 +115,7 @@ def googledorker(web):
         google_it(site, "site:"+site+" inurl:callback")
         time.sleep(5)
 
-    except urllib2.HTTPError as err:
+    except urllib.error.HTTPError as err:
         if err.code == 503:
             print(R+' [-] Captcha appeared...\n')
             pass
