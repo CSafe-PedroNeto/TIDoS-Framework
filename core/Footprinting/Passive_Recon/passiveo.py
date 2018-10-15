@@ -45,144 +45,144 @@ def passiveo(web):
 
     print(" [!] Module Selected : Passive Reconnaissance\n")
     passiveban()
-    v = raw_input (''+GR+'  [#] \033[1;4mTID\033[0m'+GR+' :> ' + color.END)
+    v = input (''+GR+'  [#] \033[1;4mTID\033[0m'+GR+' :> ' + color.END)
     print('\n\n')
     if v.strip() == '1':
         print(C+' [!] Type Selected '+B+': Ping Check')
         piweb(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '2':
         print(C+' [!] Type Selected '+B+': WhoIS Checkup')
         whoischeckup(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '3':
         print(C+' [!] Type Selected '+B+': GeoIP Lookup')
         getgeoip(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '4':
         print(C+' [!] Type Selected '+B+': DNS Lookup')
         dnschk(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '5':
         print(C+' [!] Type Selected '+B+': Subdomain Scan')
         subdom(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '6':
         print(C+' [!] Type Selected '+B+': Reverse DNS Lookup')
         revdns(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '7':
         print(C+' [!] Type Selected : Subnet Enumeration')
         subnet(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '8':
         print(C+' [!] Type Selected '+B+': Reverse IP Lookup')
         revip(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '9':
         print(C+' [!] Type Selected '+B+': IP History')
         iphistory(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '10':
         print(C+' [!] Type Selected '+B+': Page Links')
         links(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '11':
         print(C+' [!] Type Selected '+B+': Google Search')
         googleSearch()
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '12':
         print(C+' [!] Type Selected '+B+': Google Dorker')
         googledorker(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '13':
         print(C+' [!] Type Selected '+B+': Wayback Machine')
         webarchive(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '14':
         print(C+' [!] Type Selected '+B+': Hacked Email Check')
         hackedmail()
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '15':
         print(C+' [!] Type Selected '+B+': Mail to Domain')
         mailtodom()
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '16':
         print(C+' [!] Type Selected '+B+': Google Groups Enum')
         googlegroups(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '17':
         print(C+' [!] Type Selected '+B+': Check Username')
         checkuser(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '18':
         print(C+' [!] Type Selected '+B+': PasteBin Posts')
         pastebin(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '19':
         print(C+' [!] Type Selected '+B+': LinkedIn Gathering')
         linkedin(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '20':
         print(C+' [!] Type Selected '+B+': Google Plus Gathering')
         googlenum(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '21':
         print(C+' [!] Type Selected '+B+': Public Contact Info')
         getconinfo(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '22':
         print(C+' [!] Type Selected '+B+': CENSYS Gathering')
         censysdom(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '23':
         print(C+' [!] Type Selected '+B+': Threat Intel Gathering')
         threatintel(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         passiveo(web)
 
     elif v.strip() == '99':
@@ -311,7 +311,7 @@ def passiveo(web):
 
         print(G+' [+] All modules successfully completed!')
         time.sleep(3)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print(GR+' [*] Going back...')
         os.system('clear')
         passiveo(web)

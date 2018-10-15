@@ -31,48 +31,48 @@ def infodisc(web):
     infodiscban()
     print('')
     time.sleep(0.3)
-    v = raw_input (''+GR+'  [#] \033[1;4mTID\033[0m'+GR+' :> ' + color.END)
+    v = input (''+GR+'  [#] \033[1;4mTID\033[0m'+GR+' :> ' + color.END)
     print('')
     if v == '1':
         print(C+' [!] Type Selected :'+B+' Credit Card Enumeration')
         creditcards(web)
         print('\n\n')
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         infodisc(web)
 
     elif v == '2':
         print(C+' [!] Type Selected :'+B+' Extract All Emails')
         emailext(web)
         print('\n\n')
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         infodisc(web)
 
     elif v == '3':
         print(C+' [!] Type Selected :'+B+' Enumerate Errors + FPD')
         errors(web)
         print('\n\n')
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         infodisc(web)
 
     elif v == '4':
         print(C+' [!] Type Selected :'+B+' Internal IP disclosure')
         internalip(web)
         print('\n\n')
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         infodisc(web)
 
     elif v == '5':
         print(C+' [!] Type Selected :'+B+' Phone Numbers Extract')
         phone(web)
         print('\n\n')
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         infodisc(web)
 
     elif v == '6':
         print(C+' [!] Type Selected :'+B+' Social Security Numbers')
         ssn(web)
         print('\n\n')
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         infodisc(web)
 
     elif v == 'A':

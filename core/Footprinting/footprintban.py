@@ -8,7 +8,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import os, time
 from core.Core.colors import *
 from core.Core.arts import footprintban_art
@@ -17,7 +17,7 @@ def footprintban():
 
     time.sleep(0.5)
     os.system('clear')
-    print(G+' [!] Module Loaded : Reconnaissance\n')
+    print((G+' [!] Module Loaded : Reconnaissance\n'))
     print(footprintban_art)
     print("""
 Choose from the following options:
