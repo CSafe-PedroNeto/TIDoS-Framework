@@ -9,11 +9,11 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import os
 import re
 import time
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 from re import search, I
 from core.Core.colors import *
 
@@ -33,13 +33,13 @@ def htsearch(url):
     content += "</g:searchrequest>\r\n"
     time.sleep(0.7)
     print(GR+' [*] Setting the parameters...')
-    req = urllib2.Request(url,headers=headers,data=content)
+    req = urllib.request.Request(url,headers=headers,data=content)
     req.get_method = lambda : sr
     try:
         time.sleep(0.7)
         print(GR+' [*] Making the request...')
-        resp = urllib2.urlopen(req)
-    except urllib2.HTTPError as e:
+        resp = urllib.request.urlopen(req)
+    except urllib.error.HTTPError as e:
         print(R+' [-] Exception : '+str(e))
 
     print(C+' [+] Matching the signatures...')
@@ -66,13 +66,13 @@ def profind(url):
     content += "</a:propfind>\r\n"
     time.sleep(0.7)
     print(GR+' [*] Setting the parameters...')
-    req = urllib2.Request(url,headers=headers,data=content)
+    req = urllib.request.Request(url,headers=headers,data=content)
     req.get_method = lambda : pro
     time.sleep(0.7)
     try:
         print(GR+' [*] Making the request...')
-        resp = urllib2.urlopen(req)
-    except urllib2.HTTPError as e:
+        resp = urllib.request.urlopen(req)
+    except urllib.error.HTTPError as e:
         print(R+' [-] Exception : '+str(e))
     time.sleep(0.7)
     print(C+' [+] Matching the signatures...')

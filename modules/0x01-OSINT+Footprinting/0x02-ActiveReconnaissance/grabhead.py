@@ -8,8 +8,8 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
-import urllib
+
+import urllib.request, urllib.parse, urllib.error
 import time
 import sys
 from time import sleep

@@ -9,7 +9,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import time
 import requests
 import os
@@ -25,7 +25,7 @@ def sharedns(web):
     print(O+' [!] Looking up for name servers on which website is hosted...\n'+G)
     time.sleep(0.7)
     system('dig +nocmd '+web+' ns +noall +answer')
-    h = raw_input(O+'\n [*] Enter any DNS Server from above :> ')
+    h = input(O+'\n [*] Enter any DNS Server from above :> ')
     time.sleep(0.4)
     print(GR + ' [!] Discovering hosts on same DNS Server...')
     time.sleep(0.4)

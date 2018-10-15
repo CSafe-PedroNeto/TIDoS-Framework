@@ -9,7 +9,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import time
 import os
 import sys
@@ -43,54 +43,54 @@ def filebrute(web):
     print(B+'  [A]'+C+' The Auto-Awesome Module\n')
     print(B+'  [99]'+C+' Back\n')
     time.sleep(0.3)
-    v = raw_input(O+'  [#] \033[1;4mTID\033[0m'+O+' :> ' + color.END)
+    v = input(O+'  [#] \033[1;4mTID\033[0m'+O+' :> ' + color.END)
     print('')
     if v.strip() == '1':
         print(B+' [!] Type Selected :'+C+' Backdoor Brute')
         backbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         filebrute(web)
 
     elif v.strip() == '2':
         print(B+' [!] Type Selected :'+C+' Backup Brute')
         backupbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         filebrute(web)
 
     elif v.strip() == '3':
         print(B+' [!] Type Selected :'+C+' Dot File Brute')
         dotbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         filebrute(web)
 
     elif v.strip() == '4':
         print(B+' [!] Type Selected :'+C+' Password Brute')
         passbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         filebrute(web)
 
     elif v.strip() == '5':
         print(B+' [!] Type Selected :'+C+' Proxy Brute')
         proxybrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         filebrute(web)
 
     elif v.strip() == '6':
         print(B+' [!] Type Selected :'+C+' Multiple Indices')
         indexmulbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         filebrute(web)
 
     elif v.strip() == '7':
         print(B+' [!] Type Selected :'+C+' Log Locations')
         logbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         filebrute(web)
 
@@ -134,7 +134,7 @@ def filebrute(web):
 
         print(B+' [!] All scantypes have been tested on target...')
         time.sleep(4)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print(B+' [*] Going back to menu...')
 
     elif v == '99':

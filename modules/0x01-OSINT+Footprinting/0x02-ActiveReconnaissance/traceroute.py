@@ -9,7 +9,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import os
 from time import sleep
 from core.Core.colors import *
@@ -22,13 +22,13 @@ def traceroute(web):
 
     web = web.replace('https://','')
     web = web.replace('http://','')
-    m = raw_input(O+' [#] Do you want to fragment the packets? (y/n) :> ')
+    m = input(O+' [#] Do you want to fragment the packets? (y/n) :> ')
     if m == 'y' or m == 'Y':
         print(GR+' [!] Using fragmented packets...')
-        p = raw_input(O+' [#] Enter the network type to be used [(I)CMP/(T)CP] :> ')
+        p = input(O+' [#] Enter the network type to be used [(I)CMP/(T)CP] :> ')
         if p == 'icmp' or p == 'ICMP' or p == 'I' or p == 'i':
             print(GR+' [*] Using ICMP ECHO type for traceroute...')
-            w = raw_input(O+' [*] Enable socket level debugging? (y/n) :> ')
+            w = input(O+' [*] Enable socket level debugging? (y/n) :> ')
             if w == 'y' or w == 'Y':
                 print(GR+' [+] Enabling socket level debugging...')
                 sleep(0.3)
@@ -43,7 +43,7 @@ def traceroute(web):
                 traceroute(web)
         elif p == 'tcp' or p == 'TCP' or p == 't' or p == 'T':
             print(GR+' [*] Using TCP/SYN for traceroute...')
-            w = raw_input(O+' [*] Enable socket level debugging? (y/n) :> ')
+            w = input(O+' [*] Enable socket level debugging? (y/n) :> ')
             if w == 'y' or w == 'Y':
                 print(GR+' [+] Enabling socket level debugging...')
                 sleep(0.3)
@@ -61,10 +61,10 @@ def traceroute(web):
             traceroute(web)
     elif m == 'n' or m == 'N':
         print(GR+' [!] Using unfragmented packets...')
-        p = raw_input(O+' [#] Enter the network type to be used (ICMP/TCP) :> ')
+        p = input(O+' [#] Enter the network type to be used (ICMP/TCP) :> ')
         if p == 'icmp' or p == 'ICMP' or p == 'I' or p == 'i':
             print(GR+' [*] Using ICMP ECHO type for traceroute...')
-            w = raw_input(O+' [*] Enable socket level debugging? (y/n) :> ')
+            w = input(O+' [*] Enable socket level debugging? (y/n) :> ')
             if w == 'y' or w == 'Y':
                 print(GR+' [+] Enabling socket level debugging...')
                 sleep(0.3)
@@ -79,7 +79,7 @@ def traceroute(web):
                 traceroute(web)
         elif p == 'tcp' or p == 'TCP' or p == 't' or p == 'T':
             print(GR+' [*] Using TCP/SYN for traceroute...')
-            w = raw_input(O+' [*] Enable socket level debugging? (y/n) :> ')
+            w = input(O+' [*] Enable socket level debugging? (y/n) :> ')
             if w == 'y' or w == 'Y':
                 print(GR+' [+] Enabling socket level debugging...')
                 sleep(0.3)

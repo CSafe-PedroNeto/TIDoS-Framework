@@ -9,7 +9,7 @@
 #This module is a part of TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import socket
 import ssl
 import time

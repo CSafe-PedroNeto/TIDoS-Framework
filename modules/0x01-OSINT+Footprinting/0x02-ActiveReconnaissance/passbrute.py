@@ -9,7 +9,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import os
 import time
 import requests
@@ -80,7 +80,7 @@ def passbrute(web):
     print(R+'    =========================================\n')
 
     print(O+' [*] Path to file to be used '+R+'(Default: files/fuzz-db/pass_paths.lst)...')
-    fil = raw_input(O+' [#] Your input (Press Enter if default) :> ')
+    fil = input(O+' [#] Your input (Press Enter if default) :> ')
     if fil == '':
         fil = 'files/fuzz-db/pass_paths.lst'
     else:

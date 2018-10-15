@@ -9,8 +9,8 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
-import httplib
+
+import http.client
 import time
 from core.Core.colors import *
 
@@ -26,7 +26,7 @@ def httpmethods(web):
         web = web.replace('https://','')
         web = web.replace('http://','')
         print(O+' [!] Making the connection...')
-        conn = httplib.HTTPConnection(web)
+        conn = http.client.HTTPConnection(web)
         conn.request('OPTIONS','/')
         response = conn.getresponse()
         q = str(response.getheader('allow'))
