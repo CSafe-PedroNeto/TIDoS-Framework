@@ -31,7 +31,7 @@ def crawlers(web):
     print(' [!] Module Selected : Crawlers')
     time.sleep(0.4)
     crawlersban() # banner
-    v = raw_input(O+' [#] TID :> ')
+    v = str(input(O+' [#] TID :> '))
 
     if v.strip() == '1': # level 1 crawler
         print(B+' [!] Module Selected :'+C+' Crawler (Depth 1)')
@@ -73,7 +73,7 @@ def crawlers(web):
         crawler3(web) # unleash level 3
 
         print(B+'\n [!] Scan Type Completed :'+C+' Crawler 3\n\n'+G+' [+] All modules successfully completed!')
-        raw_input(GR+' [+] Press '+O+'Enter '+GR+'to continue...') # for the user to take a breadth :/
+        input(GR+' [+] Press '+O+'Enter '+GR+'to continue...') # for the user to take a breadth :/
         crawlers(web) # get back to menu
 
     else:

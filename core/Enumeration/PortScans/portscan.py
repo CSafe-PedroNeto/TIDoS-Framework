@@ -36,7 +36,7 @@ def portscan(web):
     print(W+' [!] Module Selected : Port Scanning')
     time.sleep(0.4)
     portscanban()
-    v = raw_input (GR+'  [#] \033[1;4mTID\033[0m'+GR+' :> ' + color.END)
+    v = str(input (GR+'  [#] \033[1;4mTID\033[0m'+GR+' :> ' + color.END))
 
     if v.strip() == '1':
         print(B+' [!] Module Selected :'+C+' Simple Port Scan')
