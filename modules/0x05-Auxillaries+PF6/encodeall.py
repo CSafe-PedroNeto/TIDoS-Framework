@@ -9,13 +9,13 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
-import urllib
+
+import urllib.request, urllib.parse, urllib.error
 from core.Core.colors import *
 from cgi import escape
 from time import sleep
 try:
-    import StringIO # python2
+    import io # python2
 except ImportError:
     from io import StringIO
     # python3
@@ -24,7 +24,7 @@ import os
 
 def url0x00(url):
 
-    encoded = urllib.quote_plus(url)
+    encoded = urllib.parse.quote_plus(url)
     print(G+" [+] Encoded string : "+O, encoded)
 
 def html0x00(st):
@@ -73,7 +73,7 @@ def encodeall():
         print(R+'\n    =============================')
         print(R+'     S T R I N G   E N C O D E R')
         print(R+'    =============================\n')
-        st = raw_input(O+' [-] Enter a string to be encoded :> ')
+        st = input(O+' [-] Enter a string to be encoded :> ')
 
         def encode0x00(st):
             print(O+'\n  Choose from the options to encode to:\n')
@@ -86,40 +86,40 @@ def encodeall():
             print(B+'    [7]'+C+' Binary Encode')
             print(B+'    [8]'+C+' GZip Encode\n')
             print(B+'    [99]'+C+' Back\n')
-            r = raw_input(O+' [#] Enter your option :> ')
+            r = input(O+' [#] Enter your option :> ')
             print(GR+' [*] Encoding string...')
             sleep(0.5)
             if r == '1':
                 url0x00(st)
-                raw_input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
+                input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
                 encode0x00(st)
             elif r == '2':
                 html0x00(st)
-                raw_input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
+                input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
                 encode0x00(st)
             elif r == '3':
                 base640x00(st)
-                raw_input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
+                input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
                 encode0x00(st)
             elif r == '4':
                 ascii0x00(st)
-                raw_input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
+                input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
                 encode0x00(st)
             elif r == '5':
                 hex0x00(st)
-                raw_input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
+                input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
                 encode0x00(st)
             elif r == '6':
                 octal0x00(st)
-                raw_input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
+                input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
                 encode0x00(st)
             elif r == '7':
                 binary0x00(st)
-                raw_input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
+                input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
                 encode0x00(st)
             elif r == '8':
                 gzip0x00(st)
-                raw_input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
+                input(O+'\n [+] Press '+GR+'Enter'+O+' to Continue...')
                 encode0x00(st)
             elif r == '99':
                 print(G+' [+] Back!')

@@ -9,7 +9,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import time
 import PIL.ExifTags
 from PIL.ExifTags import TAGS, GPSTAGS
@@ -56,7 +56,7 @@ def exif1meta(image_path):
     if hasattr(image, '_getexif'):
         exifinfo = image._getexif()
         if exifinfo is not None:
-            for tag, value in exifinfo.items():
+            for tag, value in list(exifinfo.items()):
                 decoded = TAGS.get(tag, tag)
                 ret[decoded] = value
     gps(ret)
@@ -78,7 +78,7 @@ def imgext():
     print(R+'\n    =============================')
     print(R+'     I M A G E   A N A L Y S I S')
     print(R+'    =============================\n')
-    name = raw_input(O+' [#] Enter path to image file :> ')
+    name = input(O+' [#] Enter path to image file :> ')
 
     if os.path.exists(name):
         print(GR+" [+] Metadata for file: %s " %(name))

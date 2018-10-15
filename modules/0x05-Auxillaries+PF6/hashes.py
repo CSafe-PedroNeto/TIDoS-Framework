@@ -9,7 +9,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import time
 import hashlib
 from core.Core.colors import *
@@ -19,7 +19,7 @@ def hashes():
     print(R+'\n    =============================')
     print(R+'     H A S H   G E N E R A T O R')
     print(R+'    =============================\n')
-    message = raw_input(O+" [#] Enter the string :> ")
+    message = input(O+" [#] Enter the string :> ")
     print(GR+' [+] Generating hashes...')
     time.sleep(0.6)
 

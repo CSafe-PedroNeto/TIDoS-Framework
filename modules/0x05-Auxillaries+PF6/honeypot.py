@@ -8,7 +8,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import socket
 import requests
 import time
