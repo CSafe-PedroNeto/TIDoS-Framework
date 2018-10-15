@@ -8,7 +8,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import time
 import os
 from core.Core.colors import *
@@ -22,12 +22,12 @@ def auxilban():
     print(auxilban_art)
     time.sleep(0.3)
     print('')
-    print(B+'     [1]'+C+' Generate Hashes from Strings'+W+'(4 Types) ')
+    print((B+'     [1]'+C+' Generate Hashes from Strings'+W+'(4 Types) '))
     time.sleep(0.1)
-    print(B+'     [2]'+C+' Encode Payload or Strings'+W+' (7 Types)')
+    print((B+'     [2]'+C+' Encode Payload or Strings'+W+' (7 Types)'))
     time.sleep(0.1)
-    print(B+'     [3]'+C+' Extract Metadata from Images'+W+' (EXIF Data)')
+    print((B+'     [3]'+C+' Extract Metadata from Images'+W+' (EXIF Data)'))
     time.sleep(0.1)
-    print(B+'     [4]'+C+' HoneyPot Probability'+W+' (ShodanLabs HoneyScore)\n')
+    print((B+'     [4]'+C+' HoneyPot Probability'+W+' (ShodanLabs HoneyScore)\n'))
     time.sleep(0.1)
-    print(B+'     [99]'+C+' Back\n')
+    print((B+'     [99]'+C+' Back\n'))
