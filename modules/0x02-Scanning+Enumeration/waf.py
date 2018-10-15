@@ -9,7 +9,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import os
 import re
 import sys
@@ -106,7 +106,7 @@ def waf(web):
     time.sleep(1)
     head, con = getReq0x00(web)
     waftypes = detectWaf0x00(head, con)
-    for i in xrange(0,len(waftypes)):
+    for i in range(0,len(waftypes)):
         try:
             if waftypes[i] != None and waftypes[i] != '':
                 print(GR+'\n [*] Response seems to be matching a WAF signature...')

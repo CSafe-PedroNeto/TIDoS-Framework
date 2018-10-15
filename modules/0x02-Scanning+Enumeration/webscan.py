@@ -9,7 +9,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import socket
 import sys
 import json
@@ -87,9 +87,9 @@ def view(server, ur, uid, sec):
     payload = res.json()
 
     try:
-        if 'title' in payload['80']['http']['get'].keys():
+        if 'title' in list(payload['80']['http']['get'].keys()):
             print(O+" [+] Title : "+GR+"%s" % payload['80']['http']['get']['title'])
-        if 'server' in payload['80']['http']['get']['headers'].keys():
+        if 'server' in list(payload['80']['http']['get']['headers'].keys()):
             print(C+" [+] Server : "+GR+"%s" % payload['80']['http']['get']['headers']['server'])
 
     except Exception as error:

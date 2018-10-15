@@ -9,8 +9,8 @@
 #This script is a part of TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
-import os, sys, urllib, urllib2, time
+
+import os, sys, urllib.request, urllib.parse, urllib.error, urllib.request, urllib.error, urllib.parse, time
 from time import sleep
 from core.Core.colors import *
 
@@ -39,7 +39,7 @@ def nmapmain(web):
     print(''+GR+'                      +=====================================================+')
     def nmapsx(web):
         try:
-            q=raw_input(''+G+'                     [?] Do you want a verbose output of the Scan? (y/n) :> ')
+            q=input(''+G+'                     [?] Do you want a verbose output of the Scan? (y/n) :> ')
             if q == "y":
                 print('')
                 print(''+R+ '                         Choose the type of scan you want to perform :-')
@@ -82,9 +82,9 @@ def nmapmain(web):
                 print(''+GR+'                      +=====================================================+')
                 print('')
                 time.sleep(0.3)
-                main = raw_input(""+O+"                         Enter the number corresponding to the scan :> ")
+                main = input(""+O+"                         Enter the number corresponding to the scan :> ")
                 if main == "1":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         time.sleep(0.3)
                         print('')
@@ -102,7 +102,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -121,18 +121,18 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "2":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning initiated through default configured proxy...")
                         print('')
                         print(""+ C +"                             [¬] ScanType Selected:"+GR+" Specific Port Scan")
                         print('')
-                        m = raw_input(""+G+"                        [*] Enter port no. or port range (eg. 1-100) :> ")
+                        m = input(""+G+"                        [*] Enter port no. or port range (eg. 1-100) :> ")
                         print('')
                         print(""+ GR + color.BOLD + "                                [~] Result: "+color.YELLOW+color.BOLD+"════════════════╗" + color.END)
                         print(""+ color.YELLOW + color.BOLD + "     ╔══════════════════════════════════════════════════════╝")
@@ -145,7 +145,7 @@ def nmapmain(web):
                             resu = str(text)
                             print(""+ G + resu)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -154,7 +154,7 @@ def nmapmain(web):
                         print('')
                         print(""+ C +"                             [¬] ScanType Selected:"+GR+" Specific Port Scan")
                         print('')
-                        m = raw_input(""+G+"                        Enter port no. or port range (eg. 1-100) :> ")
+                        m = input(""+G+"                        Enter port no. or port range (eg. 1-100) :> ")
                         print('')
                         print(""+ GR + color.BOLD + "                                [~] Result: "+color.YELLOW+color.BOLD+"════════════════╗" + color.END)
                         print(""+ color.YELLOW + color.BOLD + "     ╔══════════════════════════════════════════════════════╝")
@@ -167,11 +167,11 @@ def nmapmain(web):
                             resu = str(text)
                             print(""+ G + resu)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "3":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -189,7 +189,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -209,11 +209,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "4":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -231,7 +231,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -251,11 +251,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "5":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -273,7 +273,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -293,11 +293,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "6":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -315,7 +315,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -335,11 +335,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "7":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -357,7 +357,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -377,11 +377,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "8":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -399,7 +399,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -419,11 +419,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "9":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -441,7 +441,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -461,11 +461,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "10":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -483,7 +483,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -503,11 +503,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "11":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -525,7 +525,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -545,11 +545,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "12":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -567,7 +567,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -587,11 +587,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "13":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -609,7 +609,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -629,7 +629,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "14":
@@ -639,7 +639,7 @@ def nmapmain(web):
                     print(""+ B +"                     [¬] ScanType Selected:"+GR+" Firewall/IDS Evasion with Fragmented Packet Scan")
                     print(''+ R +'                     [!] This scan may take a long time because it is extremely stealthy !')
                     print('')
-                    nm = raw_input(""+ O + color.BOLD + "                     [!] Enter a domain to which your IP is to be spoofed(eg. google.com) :> ")
+                    nm = input(""+ O + color.BOLD + "                     [!] Enter a domain to which your IP is to be spoofed(eg. google.com) :> ")
                     print('')
                     print(""+ R + color.BOLD + "                                [~] Result: "+color.YELLOW+color.BOLD+"════════════════╗" + color.END)
                     print(""+ color.YELLOW + color.BOLD + "     ╔══════════════════════════════════════════════════════╝")
@@ -652,11 +652,11 @@ def nmapmain(web):
                         res = str(text)
                         print(""+G+ color.BOLD + res)
                     print('')
-                    i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                    i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                     if i == "":
                         nmapsx(web)
                 elif main == "15":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -674,7 +674,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -694,7 +694,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                             print('')
@@ -745,9 +745,9 @@ def nmapmain(web):
                 print(''+GR+'                      +=====================================================+')
                 time.sleep(0.2)
                 print('')
-                main = raw_input(""+O+"                         Enter the number corresponding to the scan :> ")
+                main = input(""+O+"                         Enter the number corresponding to the scan :> ")
                 if main == "1":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ B +"                             [¬] ScanType Selected:"+GR+" Basic Port Scan")
@@ -764,7 +764,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -783,18 +783,18 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "2":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning initiated through default configured proxy...")
                         print('')
                         print(""+ C +"                             [¬] ScanType Selected:"+GR+" Specific Port Scan")
                         print('')
-                        m = raw_input(""+G+"                        [*] Enter port no. or port range (eg. 1-100) :> ")
+                        m = input(""+G+"                        [*] Enter port no. or port range (eg. 1-100) :> ")
                         print('')
                         print(""+ GR + color.BOLD + "                                [~] Result: "+color.YELLOW+color.BOLD+"════════════════╗" + color.END)
                         print(""+ color.YELLOW + color.BOLD + "     ╔══════════════════════════════════════════════════════╝")
@@ -807,7 +807,7 @@ def nmapmain(web):
                             resu = str(text)
                             print(""+ G + resu)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -816,7 +816,7 @@ def nmapmain(web):
                         print('')
                         print(""+ C +"                             [¬] ScanType Selected:"+GR+" Specific Port Scan")
                         print('')
-                        m = raw_input(""+G+"                        Enter port no. or port range (eg. 1-100) :> ")
+                        m = input(""+G+"                        Enter port no. or port range (eg. 1-100) :> ")
                         print('')
                         print(""+ GR + color.BOLD + "                                [~] Result: "+color.YELLOW+color.BOLD+"════════════════╗" + color.END)
                         print(""+ color.YELLOW + color.BOLD + "     ╔══════════════════════════════════════════════════════╝")
@@ -829,11 +829,11 @@ def nmapmain(web):
                             resu = str(text)
                             print(""+ G + resu)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "3":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -851,7 +851,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -871,11 +871,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "4":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -893,7 +893,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -913,11 +913,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "5":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -935,7 +935,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -955,11 +955,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "6":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -977,7 +977,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -997,11 +997,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "7":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -1019,7 +1019,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -1039,11 +1039,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "8":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -1061,7 +1061,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -1081,11 +1081,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "9":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -1103,7 +1103,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -1123,11 +1123,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "10":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -1145,7 +1145,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -1165,11 +1165,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "11":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -1187,7 +1187,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -1207,11 +1207,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "12":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -1229,7 +1229,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -1249,11 +1249,11 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "13":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -1271,7 +1271,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -1291,7 +1291,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                 elif main == "14":
@@ -1301,7 +1301,7 @@ def nmapmain(web):
                     print(""+ B +"                     [¬] ScanType Selected:"+GR+" Firewall/IDS Evasion with Fragmented Packet Scan")
                     print(''+ R +'                     [!] This scan may take a long time because it is extremely stealthy !')
                     print('')
-                    nm = raw_input(""+ O + color.BOLD + "                     [!] Enter a domain to which your IP is to be spoofed(eg. google.com) :> ")
+                    nm = input(""+ O + color.BOLD + "                     [!] Enter a domain to which your IP is to be spoofed(eg. google.com) :> ")
                     print('')
                     print(""+ R + color.BOLD + "                                [~] Result: "+color.YELLOW+color.BOLD+"════════════════╗" + color.END)
                     print(""+ color.YELLOW + color.BOLD + "     ╔══════════════════════════════════════════════════════╝")
@@ -1314,11 +1314,11 @@ def nmapmain(web):
                         res = str(text)
                         print(""+G+ color.BOLD + res)
                     print('')
-                    i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                    i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                     if i == "":
                         nmapsx(web)
                 elif main == "15":
-                    q = raw_input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
+                    q = input (''+G+'                        [*] Do you want to scan through a proxy? (Y/n) :> ')
                     if q == "y":
                         print('')
                         print(""+ O +"                             [!] Scanning through default configured proxy...")
@@ -1336,7 +1336,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                     else:
@@ -1356,7 +1356,7 @@ def nmapmain(web):
                             res = str(text)
                             print(""+G+ color.BOLD + res)
                         print('')
-                        i = raw_input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
+                        i = input(''+O+'                       [!] Scan Completed! Press ENTER to continue')
                         if i == "":
                             nmapsx(web)
                             print('')

@@ -9,7 +9,7 @@
 #This script is a part of TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import time
 import sys
 import os
