@@ -9,7 +9,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import time
 import os
 import sys
@@ -32,7 +32,7 @@ def updater():
     print(B+' [!] The version you have is : '+C+m)
     if m != result :
         print(O+' [!] An update is available to version '+result)
-        mn = raw_input(O+' [#] Update? '+R+'(Y/n) :> '+O)
+        mn = input(O+' [#] Update? '+R+'(Y/n) :> '+O)
         if mn == 'Y' or mn == 'y':
             print(GR+' [*] Updating...\n')
             p = open('../doc/Version_Num','w')
