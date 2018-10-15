@@ -8,7 +8,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import os
 from random import randint
 from core.Core.colors import *
@@ -140,4 +140,4 @@ def banner():
 """
     headers = [header, oblique, modular, codesploit, fb, swan]
     os.system('clear')
-    print(headers[randint(0,5)])
+    print((headers[randint(0,5)]))
