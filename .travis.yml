@@ -3,8 +3,7 @@ language: python
 cache: pip
 matrix:
   include:
-    - python: 2.7
-    - python: 3.7
+    - python: 3.7     # migration with effect only with Python 3
       dist: xenial    # required for Python 3.7 (travis-ci/travis-ci#9069)
       sudo: required  # required for Python 3.7 (travis-ci/travis-ci#9069)
 install:
