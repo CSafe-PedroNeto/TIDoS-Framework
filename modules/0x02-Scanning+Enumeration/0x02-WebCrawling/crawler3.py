@@ -9,7 +9,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import os
 import sys
 import time
@@ -17,7 +17,7 @@ sys.path.append('files/')
 import requests
 from lxml import etree
 from collections import OrderedDict
-from urlparse import urljoin
+from urllib.parse import urljoin
 from core.Core.colors import *
 
 global actual_uri
@@ -106,7 +106,7 @@ def crawler3(web):
         print(O+'   links within each of the pages]\n')
         time.sleep(0.7)
         print(R+'  WARNING : Use this with CAUTION!\n')
-        m = raw_input(GR+' [#] No. of links to be crawled (eg 100) :> ')
+        m = input(GR+' [#] No. of links to be crawled (eg 100) :> ')
         print(O+' [!] Crawling limit set to : '+C+str(m))
         w = int(m)
         crawler20x00(web, w)
