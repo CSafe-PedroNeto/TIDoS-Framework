@@ -9,7 +9,7 @@
 #This script is a part of TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import time
 import sys
 import os
@@ -23,8 +23,8 @@ def scan0x00(host):
     print(R+'\n   =======================================')
     print(R + "    S I M P L E   P O R T   S C A N N E R")
     print(R + '   =======================================\n')
-    start_port = raw_input(O+' [#] Enter initial port :> ')
-    end_port = raw_input(O+' [#] Enter ending port :> ')
+    start_port = input(O+' [#] Enter initial port :> ')
+    end_port = input(O+' [#] Enter ending port :> ')
 
     start_port = int(start_port)
     end_port = int(end_port)
@@ -78,7 +78,7 @@ def scan0x00(host):
 
         return result
 
-    mn = raw_input(O+'\n [*] Do you want a verbose output (y/n) :> ')
+    mn = input(O+'\n [*] Do you want a verbose output (y/n) :> ')
     if mn == 'y':
 
         print(''+G+'\n [+] Verbose mode selected !\n')

@@ -9,7 +9,7 @@
 #This script is a part of TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import time
 import sys
 import os
@@ -23,8 +23,8 @@ def service0x00(host):
     print(R+'\n   ===================================')
     print(R + "    S E R V I C E   D E T E C T I O N")
     print(R + '   ===================================\n')
-    start_port = raw_input(O+' [#] Enter initial port :> ')
-    end_port = raw_input(O+' [#] Enter ending port :> ')
+    start_port = input(O+' [#] Enter initial port :> ')
+    end_port = input(O+' [#] Enter ending port :> ')
 
     start_port = int(start_port)
     end_port = int(end_port)
@@ -150,7 +150,7 @@ def service0x00(host):
         else:
             return 0
 
-    mn = raw_input(O+'\n [*] Do you want a verbose output (y/n) :> ')
+    mn = input(O+'\n [*] Do you want a verbose output (y/n) :> ')
     if mn == 'y':
 
         print(''+G+'\n [+] Verbose mode selected !\n')

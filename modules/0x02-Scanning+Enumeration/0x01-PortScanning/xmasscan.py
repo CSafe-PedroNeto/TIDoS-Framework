@@ -9,7 +9,7 @@
 #This script is a part of TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 from scapy.all import *
 import sys
 from datetime import datetime
@@ -28,13 +28,13 @@ def scan0x00(target):
         print(R+'         X M A S   S C A N ')
         print(R+'        ===================\n')
         print(R+'   [Reliable only in LA Networks]\n')
-        min_port = raw_input(O+" [#] Enter Minumum Port Number -> ")
-        max_port = raw_input(O+" [#] Enter Maximum Port Number -> ")
+        min_port = input(O+" [#] Enter Minumum Port Number -> ")
+        max_port = input(O+" [#] Enter Maximum Port Number -> ")
         openfil_ports = []
         filter_ports = []
         closed_ports = []
         ip_host = socket.gethostbyname(target)
-        chk = raw_input(C+' [#] Do you want a verbose output? (y/n) :> ')
+        chk = input(C+' [#] Do you want a verbose output? (y/n) :> ')
         if chk == 'y':
 
             try:
@@ -54,7 +54,7 @@ def scan0x00(target):
                 quit()
 
 
-            ports = range(int(min_port), int(max_port)+1) # Build range from given port numbers
+            ports = list(range(int(min_port), int(max_port)+1)) # Build range from given port numbers
             starting_time = time.time() # Start clock for scan time
             SYNACK = 0x12 # Set flag values for later reference
             RSTACK = 0x14
@@ -193,7 +193,7 @@ def scan0x00(target):
                 print(" [!] Exiting...")
                 quit()
 
-            ports = range(int(min_port), int(max_port)+1)
+            ports = list(range(int(min_port), int(max_port)+1))
             starting_time = time.time()
             SYNACK = 0x12
             RSTACK = 0x14
