@@ -14,7 +14,7 @@ from re import search,I
 def yundun(headers,content):
     detect = False
     detect |= headers['server'] == 'YUNDUN'
-    if 'x-cache' in headers.keys():
+    if 'x-cache' in list(headers.keys()):
         detect |= headers['x-cache'] == 'YUNDUN'
     if detect :
         return "Yundun Web Application Firewall (Yundun)"

@@ -13,7 +13,7 @@ from re import search,I
 
 def hyperguard(headers,content):
     detect = False
-    for header in headers.items():
+    for header in list(headers.items()):
         detect |= search(r'odsession=',header[1],I) is not None
         if detect: break
     if detect :

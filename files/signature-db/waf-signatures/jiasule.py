@@ -13,7 +13,7 @@ from re import search,I
 
 def jiasule(headers,content):
     detect = False
-    for header in headers.items():
+    for header in list(headers.items()):
         detect |= search(r'__jsluid=|jsl_tracking',header[1],I) is not None
         detect |= search(r'jiasule-waf',header[1],I) is not None
         if detect:break

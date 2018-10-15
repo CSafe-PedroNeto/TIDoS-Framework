@@ -13,7 +13,7 @@ from re import search,I
 
 def radware(headers,content):
     detect = False
-    for header in headers.items():
+    for header in list(headers.items()):
         detect |= header[0] == "x-sl-compstate"
         if detect:break
     detect |= search(r'Unauthorized Activity Has Been Detected.+Case Number:',content) is not None

@@ -13,6 +13,6 @@ from re import search,I
 
 def varnish(headers,content):
     detect = False
-    detect |= search(r'varnish|x-varnish',str(headers.values()),I) is not None
+    detect |= search(r'varnish|x-varnish',str(list(headers.values())),I) is not None
     if detect :
         return "Varnish FireWall (OWASP)"

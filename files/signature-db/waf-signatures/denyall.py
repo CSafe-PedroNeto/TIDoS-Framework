@@ -13,7 +13,7 @@ from re import search,I
 
 def denyall(headers,content):
     detect = False
-    for header in headers.items():
+    for header in list(headers.items()):
         detect |= search(r'sessioncookie=',header[1],I) is not None
         if detect: break
     detect |= search(r"Condition Intercepted",content) is not None

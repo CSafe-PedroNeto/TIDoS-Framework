@@ -13,7 +13,7 @@ from re import search,I
 
 def cloudflare(headers,content):
     detect = False
-    for header in headers.items():
+    for header in list(headers.items()):
         detect |=  header[0].lower() == "cf-ray"
         detect |= search(r'__cfduid=|cloudflare-nginx|cloudflare[-]',header[1],I) is not None
         if detect: break

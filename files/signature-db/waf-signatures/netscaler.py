@@ -13,7 +13,7 @@ from re import search,I
 
 def netscaler(headers,content):
     detect = False
-    for header in headers.items():
+    for header in list(headers.items()):
         detect |= search(r'(ns_af=|citrix_ns_id|NSC_)',header[1],I) is not None
         detect |= search(r'ns.cache',header[1],I) is not None
         if detect:break

@@ -14,7 +14,7 @@ from re import search,I
 def yunsuo(headers,content):
     detect = False
     detect |= search('<img class=\"yunsuologo\"',content) is not None
-    if 'cookie' in headers.keys():
+    if 'cookie' in list(headers.keys()):
         detect |= search('yunsuo_session',headers['cookie'],I) is not None
     if detect :
         return "Yunsuo Web Application Firewall (Yunsuo)"

@@ -13,6 +13,6 @@ from re import search,I
 
 def stingray(headers,content):
     detect = False
-    detect |= search(r'X-Mapping-',str(headers.keys()),I) is not None
+    detect |= search(r'X-Mapping-',str(list(headers.keys())),I) is not None
     if detect :
         return "Stingray Application Firewall (Riverbed / Brocade)"

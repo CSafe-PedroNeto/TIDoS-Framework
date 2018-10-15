@@ -13,7 +13,7 @@ from re import search,I
 
 def urlscan(headers,content):
     detect = False
-    detect |= search('rejected-by-urlscan',str(headers.values()),I) is not None
+    detect |= search('rejected-by-urlscan',str(list(headers.values())),I) is not None
     detect |= search(r'Rejected-By-UrlScan',content,I) is not None
     if detect :
         return "UrlScan (Microsoft)"

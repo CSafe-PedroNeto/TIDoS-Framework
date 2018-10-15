@@ -13,7 +13,7 @@ from re import search,I
 
 def dotdefender(headers,content):
     detect = False
-    for header in headers.items():
+    for header in list(headers.items()):
         detect |= header[0] == "x-dotdefender-denied"
         if detect: break
     detect |= search(r"dotDefender Blocked Your Request",content) is not None
