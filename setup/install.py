@@ -8,7 +8,7 @@
 #This module requires TIDoS Framework
 #https://github.com/theInfectedDrake/TIDoS-Framework
 
-from __future__ import print_function
+
 import sys
 import os
 import time
@@ -56,7 +56,7 @@ def install():
         time.sleep(0.5)
         print(GR+'Finalising options...')
         time.sleep(0.5)
-        raw_input(G+"\nPress 'Enter' to start the installation...")
+        input(G+"\nPress 'Enter' to start the installation...")
         Preinstall="rm -v -rf /opt/tidos/ && rm -v -f /usr/bin/tidos"
         print(B+ '\nChecking for pre-installations...')
         time.sleep(0.5)
