@@ -33,54 +33,54 @@ def othbugs(web):
     othbugsban()
     print('')
     time.sleep(0.3)
-    v = raw_input (GR+'  [#] \033[1;4mTID\033[0m'+GR+' :> ' + color.END)
+    v = input (GR+'  [#] \033[1;4mTID\033[0m'+GR+' :> ' + color.END)
     print('')
     if v == '1':
         print(B+' [!] Type Selected :'+C+' FTP Brute')
         ftpbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         othbugs(web)
 
     elif v == '2':
         print(B+' [!] Type Selected :'+C+' SSH Brute')
         sshbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         othbugs(web)
 
     elif v == '3':
         print(B+' [!] Type Selected :'+C+' SQL Brute')
         sqlbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         othbugs(web)
 
     elif v == '4':
         print(B+' [!] Type Selected :'+C+' POP 3/2 Brute')
         popbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         othbugs(web)
 
     elif v == '5':
         print(B+' [!] Type Selected :'+C+' SMTP Brute')
         smtpbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         othbugs(web)
 
     elif v == '6':
         print(B+' [!] Type Selected :'+C+' TELNET Brute')
         telnetbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         othbugs(web)
 
     elif v == '7':
         print(B+' [!] Type Selected :'+C+' XMPP Brute')
         xmppbrute(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print('\n\n')
         othbugs(web)
 
@@ -124,7 +124,7 @@ def othbugs(web):
 
         print(B+' [!] All scantypes have been tested on target...')
         time.sleep(4)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         print(B+' [*] Going back to menu...')
         othbugs(web)
 

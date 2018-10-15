@@ -34,84 +34,84 @@ def webbugs(web):
 
     print(W+'\n [*] Type Selected : Basic Web Bugs and Misconfigurations...')
     webbugsban()
-    v = raw_input(O+B+' [#] \033[4mTID\033[1;0m '+GR+':> ' + color.END)
+    v = input(O+B+' [#] \033[4mTID\033[1;0m '+GR+':> ' + color.END)
     print('\n')
     if v.strip() == '1':
         print(B+' [!] Type Selected :'+C+' iCORS')
         icors(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '2':
         print(B+' [!] Type Selected :'+C+' Same Site Scripting')
         ssscript(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '3':
         print(B+' [!] Type Selected :'+C+' Clickjack')
         clickjack(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '4':
         print(B+' [!] Type Selected :'+C+' Zone Transfer')
         zone(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '5':
         print(B+' [!] Type Selected :'+C+' Cookie Check')
         cookiecheck(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '6':
         print(B+' [!] Type Selected :'+C+' Sec. Headers')
         headers(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '7':
         print(B+' [!] Type Selected :'+C+' Cloudflare Misconfig.')
         cloudflaremisc(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '8':
         print(B+' [!] Type Selected :'+C+' HSTS Check')
         hsts(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '9':
         print(B+' [!] Type Selected :'+C+' Cross Site Tracing')
         xsstrace(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '10':
         print(B+' [!] Type Selected :'+C+' Telnet Enabled')
         netmisc(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '11':
         print(B+' [!] Type Selected :'+C+' Email Spoof')
         mailspoof(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '12':
         print(B+' [!] Type Selected :'+C+' Host Header Injection')
         hhi(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '13':
         print(B+' [!] Type Selected :'+C+' Cookie Injection')
         sessionfix(web)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == 'A':
@@ -185,7 +185,7 @@ def webbugs(web):
 
         print(G+' [+] All modules successfully completed!')
         time.sleep(0.5)
-        raw_input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
+        input(O+' [#] Press '+GR+'Enter'+O+' to continue...')
         webbugs(web)
 
     elif v.strip() == '99':
